@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather.ma</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js" defer></script> 
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+    <link rel="stylesheet" href="boot/bootstrap.min.css">
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Weather.ma</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero" id="home">
+      <div class="hero__container">
+        <h1 class="hero__heading">Weather.<span>ma</span></h1>
+        <!-- <form action="" method="post"> -->
+        <div class="col-sm-10">
+          <input type="search" class="form-control form-control-lg" id="colFormLabelLg" required placeholder="La meteo de .....">
+        </div>
+        <button class="main__btn" id="get-btn" type="button" onclick="getData()"><i class="fas fa-search" style="color: white;"></i></button>
+      <!-- </form> -->
+      </div>
+
+
+      <div class="container" id="wrapper" >
+        <div class="container-fluid" id="current-weather">
+          <div class="row">
+          <div class="=pan">
+            <h1><spam id="cityName"></spam> ,<spam id="cityCode"></spam></h1>
+            <br>
+          </br>
+          <time id="localDate"></time>
+          <h5 id="localTime"></h5>
+          <br>
+          </br>
+            <br>
+          </br>
+          </div>
+          
+          <div class="pan" style="margin: 5px auto;padding:0;">
+            <div>
+              <p id="tempDescription" style="font-size: 90px;"><samp>°C</samp><br</p>
+              <p id="descrition" style="font-size: 25px;" style="text-align: center;">:</p>
+            </div>
+          </div>
+          
+          <div class="pan" style="text-align: right;">
+            <h6 style="font-size: 20px;">Humidity: <spam id="humidity"></spam>%</h6>
+            <h6 style="font-size: 20px;">Wind: <spam id="wind"></spam> m/s</h6>
+            <h6 style="font-size: 20px;">High: <spam id="mainTempHot"></spam>°</h6>
+            <h6 style="font-size: 20px;">Low: <spam id="mainTempLow"></spam>°</h6>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="boot/jquery.js"></script>
+    <script src="boot/popper.min.js"></script>
+    <script src="boot/bootstrap.min.js"></script>
+  </body>
+</html>
